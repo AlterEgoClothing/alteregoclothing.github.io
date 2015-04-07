@@ -1,7 +1,7 @@
 {% if site.categories['event']  %}
 {% capture lang_url %}{% translate global.lang_url %}{% endcapture %}
 <section class="container" id="EventList">
-    <h1 class="text-center">{% translate titles.event %}</h1>
+    <h1 class="text-center text-warning">{% translate titles.event %}</h1>
     <ul class="media-list">
         {% for post in site.categories['event'] limit: 2 %}
         <li class="media">
@@ -29,13 +29,13 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{ lang_url }}{{ post.url }}" role="button" class="btn btn-primary">{% translate global.event_link %}</a>
+                <a href="{{ lang_url }}{{ post.url }}" role="button" class="btn btn-info">{% translate global.event_link %}</a>
             </div>
         </li>
         {% endfor %}
     </ul>
     <div class="row text-center">
-        <a href="{{ lang_url }}/event/" class="btn btn-primary rowbtn" >{% translate global.all %}</a>
+        <a href="{{ lang_url }}/event/" class="btn btn-info rowbtn" >{% translate global.all %}</a>
     </div>
 </section>
 {% endif %}
