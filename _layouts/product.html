@@ -1,0 +1,44 @@
+---
+layout: default
+body: product-page
+---
+<section class="container-fluid">
+  <div class="container">
+    <h1 class="item_add">
+      {% include title.html title=page.title %}
+    </h1>
+    <div class="row productDetails">
+      {% if page.image %}
+      <div class="col-md-6 productImage">
+        <img src="{{ page.image }}" alt="{{ page.title}}" title="{{ page.title }}" class="img-responsive" />
+      </div>
+      {% endif %}
+      <div class="col-md-6 productDescription">
+        <div class="row">
+          <div class="col-xs-6">
+            <p class="quantity">
+              <label for="quantity">Qty:</label>
+              <input id="quantity" type="text" name="quantity" class="quantity form-control item_Quantity" value="1">
+            </p>
+            {% if page.size %}
+            <label for="size">Size:</label>
+            <select id="size" class="form-control item_size">
+              {% for size in page.size %}
+              <option value="{{ size }}">{{ size }}</option>
+              {% endfor %}
+            </select>
+            {% endif %}
+            <h3 class="price text-right item_price">{{ page.price }}</h3>
+            <button class="btn btn-primary pull-right item_add" >{% translate global.add_to_cart %}</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row additionalInfo">
+      {{ content }}
+    </div>
+  </div>
+</section>

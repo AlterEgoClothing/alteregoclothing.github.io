@@ -1,0 +1,1 @@
+{% if include.description contains 'descriptions.' %}{% translate include.description %}{% else %}{{ page.description | strip_html | strip_newlines }}{% endif %}

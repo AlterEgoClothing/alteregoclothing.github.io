@@ -1,0 +1,42 @@
+---
+layout: default
+title: titles.event
+description: descriptions.event
+body: event-page
+---
+{% capture lang_url %}{% translate global.lang_url %}{% endcapture %}
+<section class="container">
+    <h6>{% translate titles.event %}</h6>
+    <ul class="media-list">
+        {% for post in site.categories['event'] %}
+        <li class="media">
+            {% if post.image %}
+            <div class="media-left">
+                <div class="thumbnail">
+                    <img src="{{ post.image }}" alt="{{ post.title }}" titlle="{{ post.title }}">
+                </div>
+            </div>
+            {% endif %}
+            <div class="media-body">
+                <h3 class="media-heading">{{ post.title }}</h3>
+                <p>{{ post.description }}</p>
+                <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                        <strong>{% translate global.time %}</strong>
+                        <div>
+                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> {{ post.start_date | date: '%F %r' }} - {{ post.end_date | date: '%F %r' }}
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        <strong>{% translate global.address %}</strong>
+                        <div>
+                            <address><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ post.location }}</address>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{ lang_url }}{{ post.url }}" role="button" class="btn btn-primary">{% translate global.event_link %}</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

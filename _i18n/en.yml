@@ -1,0 +1,24 @@
+global:
+  english: "English"
+  chinese: "Chinese"
+  indonesia: "Indonesia"
+  lang_url: ""
+  product_link: "Detail"
+  event_link: "Detail"
+  all: "See All"
+  add_to_cart: "Add to cart"
+  address: "Address："
+  time: "Time："
+
+header:
+  title: "Alter Ego"
+
+titles:
+  home: "Alter Ego Clothing and Everything"
+  product: "Clothing"
+  event: "Events"
+
+descriptions:
+  home: "Alter Ego"
+  product: "Product Descrition"
+  event: "Event Description"

@@ -1,0 +1,26 @@
+---
+layout: default
+title: titles.product
+description: descriptions.product
+body: product-page
+---
+{% capture lang_url %}{% translate global.lang_url %}{% endcapture %}
+<section class="container">
+      <h6>{% translate titles.product %}</h6>
+      <ul class="grid cs-style-3">
+            {% for post in site.categories['product'] %}
+            <li>
+                  <figure>
+                        {% if post.image %}
+                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                        {% endif %}
+                        <figcaption>
+                              <h3>{{ post.title }}</h3>
+                              <span>{{ post.description }}</span>
+                              <a href="{{ lang_url }}{{ post.url }}">{% translate global.product_link %}</a>
+                        </figcaption>
+                  </figure>
+            </li>
+            {% endfor %}
+      </ul>
+</section>

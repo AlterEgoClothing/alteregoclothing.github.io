@@ -1,0 +1,30 @@
+{% capture lang_url %}{% translate global.lang_url %}{% endcapture %}
+<nav id="header" class="navbar navbar-trans navbar-fixed-top navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.url }}">{% translate header.title %}</a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-collapsible">
+      <ul class="nav navbar-nav navbar-left">
+        {% translate_file header.html %}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {% for lang in site.languages %}
+        {% if lang == site.language_default %}
+        <li{% if site.lang == lang %} class="active"{% endif %}><a href="{{ site.baseurl_root }}">{{ site.languages_text[forloop.index0] }}</a></li>
+        {% else %}
+        <li{% if site.lang == lang %} class="active"{% endif %}><a href="{{ site.baseurl_root }}{{ lang }}">{{ site.languages_text[forloop.index0] }}</a></li>
+        {% endif %}
+        {% endfor %}
+        <li><div class="simpleCart_items"></div></li>
+        <li><div id="ibacor_shareawesome"></div></li>
+      </ul>
+    </div>
+  </div>
+</nav>

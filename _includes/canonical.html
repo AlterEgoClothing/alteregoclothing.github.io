@@ -1,0 +1,9 @@
+{% capture opengraph_text %}{% capture lang_url %}{% translate global.lang_url %}{% endcapture %}
+<link rel="canonical" href="http:{{ site.url }}{{ page.url }}"/>
+{% for lang in site.languages %}
+{% if lang == site.language_default %}
+<link rel="canonical" href="http:{{ site.url }}{{ page.url }}" hreflang="x-default"/>
+{% else %}
+<link rel="canonical" href="http:{{ site.url }}/{{ lang }}{{ page.url }}" hreflang="{{ lang }}"/>
+{% endif %}
+{% endfor %}{% endcapture %}{{ opengraph_text | strip_newlines}}

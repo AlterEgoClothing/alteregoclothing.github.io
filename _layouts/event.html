@@ -1,0 +1,51 @@
+---
+layout: default
+body: event-page
+---
+<section class="content">
+    <div class="container">
+        <h1>
+            {% include title.html title=page.title %}
+        </h1>
+        <div class="row eventDetails">
+            {% if page.image %}
+            <div class="col-md-6 eventImage">
+                <img src="{{ page.image }}" alt="{{ page.title}}" title="{{ page.title }}" class="img-responsive" />
+            </div>
+            {% endif %}
+            <div class="col-md-6 productDescription">
+                <div class="row">
+                    <blockquote class="bg-default">
+                        <p>
+                            {{ page.description }}
+                        </p>
+                    </blockquote>
+                </div>
+                {% if page.start_date && page.end_date %}
+                <div class="row">
+                    <strong>{% translate global.time %}</strong>
+                    <div>
+                        <a target="_blank" href="https://www.google.com/calendar/event?action=TEMPLATE&text={{ page.title | cgi_escape }}&dates={{ page.start_date | date : '%Y%m%d' }}/{{ page.end_date | date : '%Y%m%d' }}&details={{ page.description | cgi_escape }}&location={{ page.location | cgi_escape }}&trp=false&sprop=&sprop=name:" class="btn btn-default" role="button"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>{{ page.start_date | date: '%F %r' }} - {{ page.end_date | date: '%F %r' }}</a>
+                    </div>
+                </div>
+                {% endif %}
+                {% if page.location %}
+                <div class="row">
+                    <strong>{% translate global.address %}</strong>
+                    <address>
+                        <a target="_blank" href="https://www.google.com/maps?q={{ page.location | cgi_escape }}" class="btn btn-default" role="button"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>{{ page.location }}</a>
+                    </address>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src='//maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q={{ page.location | cgi_escape }}&z=16&output=embed&t=' class="embed-responsive-item" scrolling="no"></iframe>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row additionalInfo">
+            {{ content }}
+        </div>
+    </div>
+</section>

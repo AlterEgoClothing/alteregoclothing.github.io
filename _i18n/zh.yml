@@ -1,0 +1,24 @@
+global:
+  english: "英文"
+  chinese: "中文"
+  indonesia: "印尼文"
+  lang_url: "/zh"
+  product_link: "詳細"
+  event_link: "詳細"
+  all: "全部"
+  add_to_cart: "加入購物車"
+  address: "地址："
+  time: "時間："
+
+header:
+  title: "Alter Ego"
+
+titles:
+  home: "Alter Ego Clothing and Everything"
+  product: "Clothing"
+  event: "Events"
+
+descriptions:
+  home: "Alter Ego"
+  product: "Product Descrition"
+  event: "Event Description"

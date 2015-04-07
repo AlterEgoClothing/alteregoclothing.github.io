@@ -1,0 +1,19 @@
+{% capture opengraph_text %}
+{% capture lang_url %}{% translate global.lang_url %}{% endcapture %}
+    <meta property="og:url" content="http:{{ site.url }}{{ lang_url }}{{ page.url }}">
+{% if page.image %}
+    <meta property="og:image" content="http:{{ site.url }}{{ page.image }}">
+{% else %}
+    <meta property="og:image" content="http:{{ site.url }}/images/logo.png">
+{% endif %}
+{% if page.url contains "/product/" %}
+    <meta property="og:type" content="product">
+{% elsif page.url contains "/event/" %}
+    <meta property="og:type" content="event">
+{% else%}
+    <meta property="og:type" content="website">
+{% endif %}
+    <meta property="og:description" content="{% include description.html description=page.description %}">
+{% capture site_title %}{% include title.html title=page.title %}{% endcapture %}
+    <meta property="og:title" content="{{ site_title | strip_newlines }} - {% translate header.title %}">
+{% endcapture %}{{ opengraph_text | strip_newlines}}
