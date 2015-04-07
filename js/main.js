@@ -1,3 +1,29 @@
+var localeOptions = {
+  "en":{
+    fullLocale:"en_US",
+    currency: {
+
+    }
+  },
+  "zh":{
+    fullLocale:"zh_TW",
+    currency: {
+      symbol: "<span class='currency-symbol'>NT$</span>",
+      precision: 0
+    }
+  },
+  "id":{
+    fullLocale:"id_ID",
+    currency: {
+      symbol: "<span class='currency-symbol'>Rp</span> ",
+      thousand: ".",
+      precision: 0
+    }
+  }
+};
+
+
+
 $(function() {
   $(document).ready(function(){	
 	//$('#header').parallax("10%", 1.5);
@@ -43,21 +69,8 @@ $(function() {
     /* currency */
     var lang = $("html").attr("lang");
     if(lang){
-      var currencyOptions = {
-        "en":{
 
-        },
-        "zh":{
-          symbol: "<span class='currency-symbol'>NT$</span>",
-          precision: 0
-        },
-        "id":{
-          symbol: "<span class='currency-symbol'>Rp</span> ",
-          thousand: ".",
-          precision: 0
-        }
-      };
-      var currentCurrencyOption = currencyOptions[lang];
+      var currentCurrencyOption = localeOptions[lang].currency;
       if(currentCurrencyOption) {
         var updatePrice = function () {
           var price = $(this).attr("data-price");
