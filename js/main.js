@@ -8,7 +8,7 @@ var localeOptions = {
   },
   "zh":{
     fullLocale: "zh_TW",
-    disqusLocale: "zh_TW,
+    disqusLocale: "zh_TW",
     currency: {
       symbol: "<span class='currency-symbol'>NT$</span>",
       precision: 0
