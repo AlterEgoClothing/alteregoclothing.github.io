@@ -124,8 +124,7 @@
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     var disqus_config = function () {
-      this.language = localeOptions[$("html").attr("lang")].fullLocale;
-      console.log(this.language);
+      this.language = localeOptions[$("html").attr("lang")].disqusLocale;
     };
     var disqus_shortname = 'alteregoclothing';
     (function() {
