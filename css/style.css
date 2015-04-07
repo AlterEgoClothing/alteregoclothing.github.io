@@ -14,11 +14,20 @@ html,body {
         display:block;
     }
 }
-.thumbnail{
+.thumbnail {
     width:200px;
 }
 .socialRow {
     margin-bottom:20px;
+}
+.strike-through {
+    text-decoration: line-through;
+}
+.strike-through .currency-symbol {
+    text-decoration: none;
+}
+.currency-symbol {
+    font-size: 60%;
 }
 /*
 .navbar-trans {

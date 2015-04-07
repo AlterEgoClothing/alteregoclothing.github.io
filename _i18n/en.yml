@@ -6,7 +6,7 @@ global:
   product_link: "Detail"
   event_link: "Detail"
   all: "See All"
-  add_to_cart: "Add to cart"
+  add_to_cart: "Add To Cart"
   address: "Address："
   time: "Time："
 
