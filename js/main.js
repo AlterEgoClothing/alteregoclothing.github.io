@@ -1,6 +1,6 @@
 $(function() {
   $(document).ready(function(){	
-	$('#header').parallax("10%", 1.5);
+	//$('#header').parallax("10%", 1.5);
 
     /* activate scrollspy menu */
     $('body').scrollspy({
@@ -38,6 +38,42 @@ $(function() {
           email: "you@yours.com"
         }
       });
+    }
+
+    /* currency */
+    var lang = $("html").attr("lang");
+    if(lang){
+      var currencyOptions = {
+        "en":{
+
+        },
+        "zh":{
+          symbol: "<span class='currency-symbol'>NT$</span>",
+          precision: 0
+        },
+        "id":{
+          symbol: "<span class='currency-symbol'>Rp</span> ",
+          thousand: ".",
+          precision: 0
+        }
+      };
+      var currentCurrencyOption = currencyOptions[lang];
+      if(currentCurrencyOption) {
+        var updatePrice = function () {
+          var price = $(this).attr("data-price");
+          var quantity = parseInt($(this).attr("data-quantity"),10);
+          if(!quantity || quantity<1)
+            quantity = 1;
+          $(this).html(accounting.formatMoney(price*quantity, currentCurrencyOption));
+        };
+        $(".price[data-price]").each(updatePrice);
+        $("#quantity").change(function(){
+          var quantity =  parseInt($(this).val(),10);
+          if(!quantity || quantity<1)
+            quantity = 1;
+          $(".price[data-price]").attr("data-quantity",quantity).each(updatePrice);
+        });
+      }
     }
 
   });

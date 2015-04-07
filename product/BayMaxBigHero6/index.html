@@ -36,12 +36,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="//alterego.clothing">Alter Ego</a>
+      <a class="navbar-brand" href="/">Alter Ego</a>
     </div>
     <div class="navbar-collapse collapse" id="navbar-collapsible">
       <ul class="nav navbar-nav navbar-left">
         
-<li><a href="/product/">Product</a></li>
+<li class="active"><a href="/product/">Clothing</a></li>
 <li><a href="/event/">Events</a></li>
 <li><a href="/#SocialMedia">Social Media</a></li>
 <li><a href="/#">How To Buy</a></li>
@@ -100,8 +100,11 @@
               
             </select>
             
-            <h3 class="price text-right item_price">20</h3>
-            <button class="btn btn-primary pull-right item_add" >Add to cart</button>
+            <h3 class="price text-right item_price strike-through text-muted" data-price="20">20</h3>
+            
+            <h3 class="price text-right item_price text-danger" data-price="15">15</h3>
+            
+            <button class="btn btn-primary pull-right item_add disabled" ><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add To Cart</button>
           </div>
         </div>
 
