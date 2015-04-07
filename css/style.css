@@ -29,6 +29,9 @@ html,body {
 .currency-symbol {
     font-size: 60%;
 }
+.tags-list {
+    margin:20px;
+}
 /*
 .navbar-trans {
     background-color:#279ddd;

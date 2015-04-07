@@ -1,14 +1,12 @@
 var localeOptions = {
   "en":{
     fullLocale: "en_US",
-    disqusLocale: "en",
     currency: {
 
     }
   },
   "zh":{
     fullLocale: "zh_TW",
-    disqusLocale: "zh_TW",
     currency: {
       symbol: "<span class='currency-symbol'>NT$</span>",
       precision: 0
@@ -16,7 +14,6 @@ var localeOptions = {
   },
   "id":{
     fullLocale: "id_ID",
-    disqusLocale: "id",
     currency: {
       symbol: "<span class='currency-symbol'>Rp</span> ",
       thousand: ".",
