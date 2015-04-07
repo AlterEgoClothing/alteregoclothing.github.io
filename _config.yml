@@ -11,9 +11,10 @@ encoding: UTF-8
 languages: ['en', 'id', 'zh']
 languages_text: ['English', 'Bahasa Indonesia', '中文']
 language_default: 'en'
+
 exclude_from_localizations: ['Gemfile', 'Gemfile.lock', 'CNAME', 'robots.txt', 'js', 'images', 'css', 'assets']
 
-lang:
+languages_locale:
   en: "English"
   id: "Indonesia"
   zh: "Chinese"

@@ -3,6 +3,7 @@ global:
   chinese: "Chinese"
   indonesia: "Indonesia"
   lang_url: "/id"
+  disqusLocale: "id"
   product_link: "Detail"
   event_link: "Detail"
   all: "See All"

@@ -35,28 +35,22 @@ body: product-page
             <button class="btn btn-info pull-right item_add disabled" ><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> {% translate global.add_to_cart %}</button>
           </div>
         </div>
-
       </div>
     </div>
   </div>
   <div class="container">
+    {% if page.tags %}
+    <div class="row">
+      <ul class="list-inline text-uppercase tags-list">
+        <li><span class="glyphicon glyphicon-tags" aria-hidden="true"></span></li>
+        {% assign tags_list = page.tags %}
+        {% include tags_list.html %}
+      </ul>
+    </div>
+    {% endif %}
     <div class="row additionalInfo">
       {{ content }}
     </div>
   </div>
-
-  <div id="disqus_thread" class="container"></div>
-  <script type="text/javascript">
-    var disqus_config = function () {
-      this.language = localeOptions[$("html").attr("lang")].disqusLocale;
-    };
-    var disqus_shortname = 'alteregoclothing';
-    var disqus_title = '{{ page.title }}';
-    var disqus_identifier = '{{ page.url }}';
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
+  {% include disqus.html %}
 </section>

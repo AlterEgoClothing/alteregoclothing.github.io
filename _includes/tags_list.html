@@ -1,0 +1,11 @@
+{% capture lang_url %}{% translate global.lang_url %}{% endcapture %}
+{% if tags_list.first[0] == null %}
+  {% for tag in tags_list %}
+  	<li><a href="{{ lang_url }}/tags/#{{ tag }}-ref">{{ tag }}</a></li>
+  {% endfor %}
+{% else %}
+  {% for tag in tags_list %}
+  	<li><a href="{{ lang_url }}/tags/#{{ tag[0] }}-ref">{{ tag[0] }}</a></li>
+  {% endfor %}
+{% endif %}
+{% assign tags_list = nil %}

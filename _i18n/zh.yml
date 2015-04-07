@@ -3,6 +3,7 @@ global:
   chinese: "中文"
   indonesia: "印尼文"
   lang_url: "/zh"
+  disqusLocale: "zh_TW"
   product_link: "詳細"
   event_link: "詳細"
   all: "全部"

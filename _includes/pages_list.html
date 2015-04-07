@@ -1,0 +1,22 @@
+{% for post in pages_list %}
+  {% if post.title != null %}
+    {% if group == null or group == post.group %}
+    	<li class="media">
+		{% if post.image %}
+			<div class="media-left">
+				<div class="thumbnail">
+					<img src="{{ post.image }}" alt="{{ post.title }}" titlle="{{ post.title }}">
+				</div>
+			</div>
+		{% endif %}
+			<div class="media-body">
+				<h3 class="media-heading">{{ post.title }}</h3>
+				<p>{{ post.description }}</p>
+				<a href="{{ BASE_PATH }}{{ post.url }}" role="button" class="btn btn-info">{% translate global.product_link %}</a>
+			</div>
+		</li>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% assign pages_list = nil %}
+{% assign group = nil %}
