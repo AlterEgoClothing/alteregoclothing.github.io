@@ -83,54 +83,19 @@ footer .nav>li>a:hover {
     color:#fff;
 }
 
+#disqus_thread {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid gray;
+}
 
 
-/*** begin sharrre ***/
-.sharrre .box{
-    float:left;
+/*** begin social-likes ***/
+.social-likes__widget {
+    border-radius: 5px;
+    margin: 0.1em;
 }
-.sharrre .count {
-    color:#444444;
-    display:block;
-    font-size:17px;
-    line-height:34px;
-    height:34px;
-    padding:4px 0;
-    position:relative;
-    text-align:center;
-    text-decoration:none;
-    width:50px;
-    background-color:#eee;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
+.social-likes {
+    margin: 10% 0 0 10px;
 }
-.sharrre .share {
-    color:#FFFFFF;
-    display:block;
-    font-size:11px;
-    height:16px;
-    line-height:16px;
-    margin-top:3px;
-    padding:0;
-    text-align:center;
-    text-decoration:none;
-    width:50px;
-    background-color:#9CCE39;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
-}
-.sharrre .buttons {
-    display:none;
-    position:absolute;
-    margin-left:50px;
-    z-index:10;
-    background-color:#fff;
-}
-.sharrre .button {
-    float:left;
-    max-width:50px;
-    margin-left:10px;
-}
-/*** end sharrre ***/
+/*** end social-likes ***/

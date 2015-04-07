@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css">
     <link href="//cdnjs.cloudflare.com/ajax/libs/gumby/2.6.0/css/gumby.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <link href="/css/ibacor-sosmed-button.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/social-likes/3.0.14/social-likes_flat.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/grid.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -25,8 +25,7 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js"></script>
-    <script type="text/javascript" src="/js/ibacor_share.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/social-likes/3.0.14/social-likes.min.js"></script>
     <script type="text/javascript" src="/js/accounting.min.js"></script>
     <script type="text/javascript" src="/js/simpleCart.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
@@ -66,7 +65,14 @@
         
         
         <!--<li><div class="simpleCart_items"></div></li>-->
-        <li><div id="ibacor_shareawesome"></div></li>
+        <li>
+          <div class="social-likes social-likes_notext">
+            <div class="facebook" title="Share link on Facebook"></div>
+            <div class="twitter" title="Share link on Twitter"></div>
+            <div class="plusone" title="Share link on Google+"></div>
+            <div class="pinterest" title="Share image on Pinterest" data-media=""></div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -95,7 +101,7 @@
                 <div class="row">
                     <strong>Time：</strong>
                     <div>
-                        <a target="_blank" href="https://www.google.com/calendar/event?action=TEMPLATE&text=Toys+%26+Comics+Fair+2015&dates=20150307/20150308&details=Toys+%26+Comics+Fair+2015+is+around+the+corner%2C+make+sure+you+visit+us+at+Kartika+Expo%2C+Balai+Kartini+on+March+7-8th%21+We+are+at+BOOTH+B04.+Lotsa+new+coolest+designs+will+be+available+there%2C+come+and+be+a+super+hero+with+us%21&location=Kartika+Expo%2C+Balai+Kartini%2C+DKI+Jakarta&trp=false&sprop=&sprop=name:" class="btn btn-default" role="button"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>2015-03-07 12:00:00 AM - 2015-03-08 10:00:00 AM</a>
+                        <a target="_blank" href="https://www.google.com/calendar/event?action=TEMPLATE&text=Toys+%26+Comics+Fair+2015&dates=20150307/20150308&details=Toys+%26+Comics+Fair+2015+is+around+the+corner%2C+make+sure+you+visit+us+at+Kartika+Expo%2C+Balai+Kartini+on+March+7-8th%21+We+are+at+BOOTH+B04.+Lotsa+new+coolest+designs+will+be+available+there%2C+come+and+be+a+super+hero+with+us%21&location=Kartika+Expo%2C+Balai+Kartini%2C+DKI+Jakarta&trp=false&sprop=&sprop=name:" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>2015-03-07 12:00:00 AM - 2015-03-08 10:00:00 AM</a>
                     </div>
                 </div>
                 
@@ -103,7 +109,7 @@
                 <div class="row">
                     <strong>Address：</strong>
                     <address>
-                        <a target="_blank" href="https://www.google.com/maps?q=Kartika+Expo%2C+Balai+Kartini%2C+DKI+Jakarta" class="btn btn-default" role="button"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Kartika Expo, Balai Kartini, DKI Jakarta</a>
+                        <a target="_blank" href="https://www.google.com/maps?q=Kartika+Expo%2C+Balai+Kartini%2C+DKI+Jakarta" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Kartika Expo, Balai Kartini, DKI Jakarta</a>
                     </address>
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe src='//maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=Kartika+Expo%2C+Balai+Kartini%2C+DKI+Jakarta&z=16&output=embed&t=' class="embed-responsive-item" scrolling="no"></iframe>
@@ -118,6 +124,21 @@
             
         </div>
     </div>
+
+    <div id="disqus_thread" class="container"></div>
+    <script type="text/javascript">
+        var disqus_config = function () {
+            this.language = localeOptions[$("html").attr("lang")].disqusLocale;
+        };
+        var disqus_shortname = 'alteregoclothing';
+        var disqus_title = 'Toys & Comics Fair 2015';
+        var disqus_identifier = '/event/ToysComicsFair2015/';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
 </section>
     <footer id="footer">
   <div class="container">
