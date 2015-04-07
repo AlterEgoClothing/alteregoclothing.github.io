@@ -29,10 +29,12 @@ $(function() {
 	//$('#header').parallax("10%", 1.5);
 
     /* activate scrollspy menu */
-    $('body').scrollspy({
-      target: '#navbar-collapsible',
-      offset: 50
-    });
+    if($.scrollspy) {
+      $('body').scrollspy({
+        target: '#navbar-collapsible',
+        offset: 50
+      });
+    }
 
     /* smooth scrolling sections */
     $('a[href*=#]:not([href=#])').click(function() {
@@ -57,6 +59,7 @@ $(function() {
       });
     });
 
+    /*
     if(simpleCart) {
       simpleCart({
         checkout: {
@@ -65,7 +68,7 @@ $(function() {
         }
       });
     }
-
+    */
     /* currency */
     var lang = $("html").attr("lang");
     if(lang){
