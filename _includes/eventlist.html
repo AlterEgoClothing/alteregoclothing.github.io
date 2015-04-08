@@ -8,7 +8,7 @@
             {% if post.image %}
             <div class="media-left">
                 <div class="thumbnail">
-                    <img src="{{ post.image }}" alt="{{ post.title }}" titlle="{{ post.title }}">
+                    <img src="{{ post.image| asset_path }}" alt="{{ post.title }}" titlle="{{ post.title }}">
                 </div>
             </div>
             {% endif %}

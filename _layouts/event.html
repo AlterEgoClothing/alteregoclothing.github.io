@@ -10,7 +10,7 @@ body: event-page
         <div class="row eventDetails">
             {% if page.image %}
             <div class="col-md-6 eventImage">
-                <img src="{{ page.image }}" alt="{{ page.title}}" title="{{ page.title }}" class="img-responsive" />
+                <img src="{{ page.image | asset_path }}" alt="{{ page.title}}" title="{{ page.title }}" class="img-responsive" />
             </div>
             {% endif %}
             <div class="col-md-6 productDescription">

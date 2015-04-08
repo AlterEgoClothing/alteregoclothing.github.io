@@ -2,9 +2,9 @@
 {% capture lang_url %}{% translate global.lang_url %}{% endcapture %}
     <meta property="og:url" content="http:{{ site.url }}{{ lang_url }}{{ page.url }}">
 {% if page.image %}
-    <meta property="og:image" content="http:{{ site.url }}{{ page.image }}">
+    <meta property="og:image" content="http:{{ site.url }}{{ page.image | asset_path }}">
 {% else %}
-    <meta property="og:image" content="http:{{ site.url }}/images/logo.png">
+    <meta property="og:image" content="http:{{ site.url }}{{ 'logo.png' | asset_path }}">
 {% endif %}
 {% if page.url contains "/product/" %}
     <meta property="og:type" content="product">

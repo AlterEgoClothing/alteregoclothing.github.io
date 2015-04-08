@@ -7,17 +7,12 @@ permalink: pretty
 # Server
 baseurl: /
 encoding: UTF-8
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'bower.json']
 
 languages: ['en', 'id', 'zh']
 languages_text: ['English', 'Bahasa Indonesia', '中文']
 language_default: 'en'
-
-exclude_from_localizations: ['Gemfile', 'Gemfile.lock', 'CNAME', 'robots.txt', 'js', 'images', 'css', 'assets']
-
-languages_locale:
-  en: "English"
-  id: "Indonesia"
-  zh: "Chinese"
+exclude_from_localizations: ['Gemfile', 'Gemfile.lock', 'CNAME', 'robots.txt', 'bower.json']
 
 analytics:
   google:
@@ -26,3 +21,25 @@ analytics:
 
 gems:
   - jekyll-sitemap
+  - jekyll-assets
+
+# Plugin: jekyll-assets
+assets:
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/images
+    - _assets/vendors/jquery/dist
+    - _assets/vendors/bootstrap/dist
+    - _assets/vendors/bootswatch/flatly
+    - _assets/vendors/font-awesome/css
+    - _assets/vendors/social-likes
+    - _assets/vendors/modernizr
+  js_compressor: 'uglifier'
+  css_compressor: 'yui'
+  autosize: true
+  cachebust: hard
+  cache: false
+  gzip: [ text/stylesheets, application/javascript ]
+  debug: false
+  version: 1

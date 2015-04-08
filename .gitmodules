@@ -1,0 +1,9 @@
+[submodule "_assets/vendors/bootstrap"]
+    path = _assets/vendors/bootstrap
+    url = git://github.com/twbs/bootstrap.git
+[submodule "_assets/vendors/jquery"]
+    path = _assets/vendors/jquery
+    url = git://github.com/jquery/jquery.git
+[submodule "_assets/vendors/modernizr"]
+    path = _assets/vendors/modernizr
+    url = git://github.com/Modernizr/Modernizr.git

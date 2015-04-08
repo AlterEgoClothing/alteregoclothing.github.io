@@ -42,3 +42,6 @@ node_modules
 
 # Gemfile
 Gemfile.lock
+
+# Vendor
+_assets/vendor

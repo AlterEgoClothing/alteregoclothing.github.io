@@ -12,7 +12,7 @@ body: product-page
             <li>
                   <figure>
                         {% if post.image %}
-                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                        <img src="{{ post.image| asset_path }}" alt="{{ post.title }}">
                         {% endif %}
                         <figcaption>
                               <h3>{{ post.title }}</h3>

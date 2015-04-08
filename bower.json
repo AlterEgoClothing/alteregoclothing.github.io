@@ -1,0 +1,16 @@
+{
+  "name": "alteregoclothing",
+  "version": "0.0.0",
+  "homepage": "http://alterego.clothing",
+  "authors": [
+    "Oscar Iong"
+  ],
+  "description": "Alter Ego",
+  "private": true,
+  "dependencies" : {
+    "jquery" : "latest",
+    "bootstrap" : "latest",
+    "modernizr" : "latest",
+    "social-likes" : "latest"
+  }
+}

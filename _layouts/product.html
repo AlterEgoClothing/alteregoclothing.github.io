@@ -10,7 +10,7 @@ body: product-page
     <div class="row productDetails">
       {% if page.image %}
       <div class="col-md-6 productImage">
-        <img src="{{ page.image }}" alt="{{ page.title}}" title="{{ page.title }}" class="img-responsive" />
+        <img src="{{ page.image | asset_path }}" alt="{{ page.title}}" title="{{ page.title }}" class="img-responsive" />
       </div>
       {% endif %}
       <div class="col-md-6 productDescription">
