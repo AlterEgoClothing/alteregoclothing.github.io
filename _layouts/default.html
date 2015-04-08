@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta http-equiv="Pragma" content="no-cache">
     <title>{% include title.html title=page.title %} - {% translate header.title %}</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css">
     <link rel="icon" type="image/svg+xml" href="/_assets/images/favicon.svg">
     <link rel="icon" type="image/png" href="/_assets/images/favicon.png">
     <meta name="theme-color" content="#2c3e50">
     <meta name="description" content="{% include description.html description=page.description %}">{% include opengraph.html %}{% include canonical.html %}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css">
+    <script type="text/javascript" src="{% asset_path app.js %}" async ></script>
     <script type="text/javascript">
       function loadCSS( href, before, media, callback ){
         "use strict";
@@ -52,14 +53,11 @@
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="{% asset_path app.css %}">
     </noscript>
-    <script type="text/javascript" src="{% asset_path app.js %}" async ></script>
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.javascripts"></script>
     <![endif]-->
   </head>
   <body class="{{ page.body }}">
-
-
     {% include header.html %}
     {{ content }}
     {% include footer.html %}

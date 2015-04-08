@@ -37,7 +37,7 @@ assets:
     - _assets/vendors/modernizr
   js_compressor: 'uglifier'
   css_compressor: 'yui'
-  autosize: true
+  autosize: false
   cachebust: hard
   cache: false
   gzip: [ text/stylesheets, application/javascript ]
