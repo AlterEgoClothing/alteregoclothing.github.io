@@ -10,15 +10,56 @@
     <link rel="icon" type="image/png" href="/_assets/images/favicon.png">
     <meta name="theme-color" content="#2c3e50">
     <meta name="description" content="Alter Ego">    <meta property="og:url" content="http://alterego.clothing/">    <meta property="og:image" content="http://alterego.clothing/assets/logo-75f31c06be34c7e464982fcf6a5f7c68.png">    <meta property="og:type" content="website">    <meta property="og:description" content="Alter Ego">    <meta property="og:title" content="Alter Ego Clothing and Everything - Alter Ego"><link rel="canonical" href="http://alterego.clothing/"/><link rel="canonical" href="http://alterego.clothing/" hreflang="x-default"/><link rel="canonical" href="http://alterego.clothing/id/" hreflang="id"/><link rel="canonical" href="http://alterego.clothing/zh/" hreflang="zh"/>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="/assets/app-61af92860ad77e7b1268545f9a112051.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css">
+    <script type="text/javascript">
+      function loadCSS( href, before, media, callback ){
+        "use strict";
+        var ss = window.document.createElement( "link" );
+        var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+        var sheets = window.document.styleSheets;
+        ss.rel = "stylesheet";
+        ss.href = href;
+        ss.media = "only x";
+        if( callback ) {
+          ss.onload = callback;
+        }
+        ref.parentNode.insertBefore( ss, ref );
+        ss.onloadcssdefined = function( cb ){
+          var defined;
+          for( var i = 0; i < sheets.length; i++ ){
+            if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+              defined = true;
+            }
+          }
+          if( defined ){
+            cb();
+          } else {
+            setTimeout(function() {
+              ss.onloadcssdefined( cb );
+            });
+          }
+        };
+        ss.onloadcssdefined(function() {
+          ss.media = media || "all";
+        });
+        return ss;
+      }
+      //loadCSS('//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css');
+      loadCSS('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+      loadCSS('/assets/app-61af92860ad77e7b1268545f9a112051.css');
+    </script>
+    <noscript>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="/assets/app-61af92860ad77e7b1268545f9a112051.css">
+    </noscript>
     <script type="text/javascript" src="/assets/app-0ede288ef4da5d8a0a93f419980bf81a.js" async ></script>
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.javascripts"></script>
     <![endif]-->
   </head>
   <body class="home-page">
+
+
     
 <nav id="header" class="navbar navbar-trans navbar-fixed-top navbar-default" role="navigation">
   <div class="container">
