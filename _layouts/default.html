@@ -12,11 +12,11 @@
     <meta name="theme-color" content="#2c3e50">
     <meta name="description" content="{% include description.html description=page.description %}">{% include opengraph.html %}{% include canonical.html %}
     <script type="text/javascript" src="{% asset_path app.js %}" async ></script>
-    <script type="text/javascript">
+    <script type="text/javascript" id="loadCss">
       function loadCSS( href, before, media, callback ){
         "use strict";
         var ss = window.document.createElement( "link" );
-        var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+        var ref = before || window.document.getElementById( "loadCss" );
         var sheets = window.document.styleSheets;
         ss.rel = "stylesheet";
         ss.href = href;
