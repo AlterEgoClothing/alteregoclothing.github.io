@@ -9,7 +9,7 @@ body: event-page
     <h4>{% translate titles.event %}</h4>
     <ul class="media-list">
         {% for post in site.categories['event'] %}
-        <li class="media">
+        <li class="media" itemscope itemtype="http://schema.org/Event">
             {% if post.image %}
             <div class="media-left">
                 <div class="thumbnail">

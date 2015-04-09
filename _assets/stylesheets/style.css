@@ -32,6 +32,9 @@ html,body {
 .tags-list {
     margin:20px;
 }
+.hide {
+    display: none;
+}
 /*
 .navbar-trans {
     background-color:#279ddd;
