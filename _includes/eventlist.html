@@ -26,7 +26,10 @@
                     <div class="col-xs-6 col-md-6">
                         <strong>{% translate global.address %}</strong>
                         <div>
-                            <address itemprop="location" itemscope itemtype="http://schema.org/Place"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><span itemprop="address" itemprop="name" itemscope itemtype="http://schema.org/PostalAddress">{{ post.location }}</span></address>
+                            <address itemprop="location" itemscope itemtype="http://schema.org/Place">
+                                <span class="glyphicon glyphicon-map-marker" aria-hidden="true" itemprop="name">{{ post.title }}</span>
+                                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{ post.location }}</span>
+                            </address>
                         </div>
                     </div>
                 </div>
