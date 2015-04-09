@@ -1,22 +1,22 @@
-<script type="application/ld+json">
-{
-	"@context" : "http://schema.org",
-  "@type" : "Organization",
-  "name" : "{% translate header.title %}",
-  "url" : "http:{{ site.url }}",
-  "logo": "http:{{ site.url }}{{ 'logo.png' | asset_path }}",
-	"potentialAction": {
-		"@type": "SearchAction",
-		"target": "http:{{ site.url }}/search?q={search_term_string}",
-		"query-input": "required name=search_term_string"
-	},
-  "contactPoint" : [
-    { "@type" : "ContactPoint",
-      "telephone" : "+62-898-055-5198",
-      "contactType" : "customer service",
-      "areaServed" : "ID"
-    } ] ,
-  "sameAs" : [ "https://www.facebook.com/alteregoclothing",
-      "https://instagram.com/alteregoclothing"]
-}
-</script>
+<span itemscope itemtype="http://schema.org/Organization" class="hide">
+  <span itemprop="name">{% translate header.title %}</span>
+  <link itemprop="url" href="http:{{ site.url }}">
+  <img itemprop="logo" src="http:{{ site.url }}{{ 'logo.png' | asset_path }}"/>
+  <form itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+    <meta itemprop="target" content="http:{{ site.url }}/search?q={query}"/>
+    <input itemprop="query-input" type="text" name="query">
+    <input type="submit">
+  </form>
+  <p itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
+    <a itemprop="email" href="mailto:service@alterego.clothing">service@alterego.clothing</a>
+    <meta itemprop="contactType" content="customer service"/>
+    <meta itemprop="telephone" content="+62-898-055-5198"/>
+    <meta itemprop="availableLanguage" content="English"/>
+    <meta itemprop="availableLanguage" content="Indonesian"/>
+    <meta itemprop="availableLanguage" content="Chinese"/>
+    <meta itemprop="areaServed" content="ID"/>
+    <meta itemprop="areaServed" content="TW"/>
+  </p>
+  <a itemprop="sameAs" href="https://www.facebook.com/alteregoclothing">FB</a>
+  <a itemprop="sameAs" href="https://instagram.com/alteregoclothing">Instagram</a>
+</span>

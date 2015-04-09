@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="/_assets/images/favicon.png">
     <meta name="theme-color" content="#2c3e50">
     <meta name="description" content="{% include description.html description=page.description %}">
-    {% include opengraph.html %}{% include canonical.html %}{% include knowledge_graph.html %}
+    {% include opengraph.html %}{% include canonical.html %}
     <script type="text/javascript" src="{% asset_path app.js %}" async ></script>
     <script type="text/javascript" id="loadCss">
       function loadCSS( href, before, media, callback ){
@@ -62,6 +62,7 @@
     {% include header.html %}
     {{ content }}
     {% include footer.html %}
+    {% include knowledge_graph.html %}
     {% include analytics.html %}
   </body>
 </html>
