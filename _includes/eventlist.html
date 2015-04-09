@@ -28,7 +28,7 @@
                         <div>
                             <address itemprop="location" itemscope itemtype="http://schema.org/Place">
                                 <span class="glyphicon glyphicon-map-marker" aria-hidden="true" itemprop="name">{{ post.title }}</span>
-                                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{ post.location }}</span>
+                                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">{{ post.location }}</span></span>
                             </address>
                         </div>
                     </div>

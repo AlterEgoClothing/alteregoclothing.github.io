@@ -28,11 +28,13 @@ body: product-page
               {% endfor %}
             </select>
             {% endif %}
-            <meta itemprop="priceCurrency" content="{% translate global.currency %}" />
-            <h3 class="price text-right item_price {% if page.incentivePrice %}strike-through text-muted{% endif %}" data-price="{{ page.price }}" itemprop="price">{{ page.price }}</h3>
-            {% if page.incentivePrice %}
-            <h3 class="price text-right item_price text-danger" data-price="{{ page.incentivePrice }}">{{ page.incentivePrice }}</h3>
-            {% endif %}
+            <span  itemscope itemtype="http://schema.org/Offer">
+              <meta itemprop="priceCurrency" content="{% translate global.currency %}" />
+              <h3 class="price text-right item_price {% if page.incentivePrice %}strike-through text-muted{% endif %}" data-price="{{ page.price }}" itemprop="price">{{ page.price }}</h3>
+              {% if page.incentivePrice %}
+              <h3 class="price text-right item_price text-danger" data-price="{{ page.incentivePrice }}">{{ page.incentivePrice }}</h3>
+              {% endif %}
+            </span>
             <button class="btn btn-info pull-right item_add disabled" ><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> {% translate global.add_to_cart %}</button>
           </div>
         </div>
