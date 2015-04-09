@@ -9,14 +9,14 @@ body: product-page
       <h4>{% translate titles.product %}</h4>
       <ul class="grid cs-style-3">
             {% for post in site.categories['product'] %}
-            <li>
+            <li itemscope itemtype="http://schema.org/Product">
                   <figure>
                         {% if post.image %}
-                        <img src="{{ post.image| asset_path }}" alt="{{ post.title }}">
+                        <img src="{{ post.image| asset_path }}" alt="{{ post.title }}" itemprop="image">
                         {% endif %}
                         <figcaption>
-                              <h3>{{ post.title }}</h3>
-                              <span>{{ post.description }}</span>
+                              <h3 itemprop="name">{{ post.title }}</h3>
+                              <span itemprop="description">{{ post.description }}</span>
                               <a href="{{ lang_url }}{{ post.url }}">{% translate global.product_link %}</a>
                         </figcaption>
                   </figure>

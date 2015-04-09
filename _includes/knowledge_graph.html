@@ -1,0 +1,22 @@
+<script type="application/ld+json">
+{
+	"@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "{% translate header.title %}",
+  "url" : ""http:{{ site.url }}",
+  "logo": ""http:{{ site.url }}{{ 'logo.png' | asset_path }}",
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "http:{{ site.url }}/search?q={search_term_string}",
+		"query-input": "required name=search_term_string"
+	},
+  "contactPoint" : [
+    { "@type" : "ContactPoint",
+      "telephone" : "+62-898-055-5198",
+      "contactType" : "customer service",
+      "areaServed" : "ID"
+    } ] ,
+  "sameAs" : [ "https://www.facebook.com/alteregoclothing",
+      "https://instagram.com/alteregoclothing"]
+}
+</script>

@@ -4,14 +4,14 @@
     <h1 class="text-center text-warning">Hot Products</h1>
     <ul class="grid cs-style-3">
     {% for post in site.categories['product'] limit: 6 %}
-        <li>
+        <li itemscope itemtype="http://schema.org/Product">
             <figure>
                 {% if post.image %}
-                <img src="{{ post.image | asset_path }}" alt="{{ post.title }}">
+                <img itemprop="image" src="{{ post.image | asset_path  }}" alt="{{ post.title }}">
                 {% endif %}
                 <figcaption>
-                    <h4 class="text-info">{{ post.title }}</h4>
-                    <span>{{ post.description }}</span>
+                    <h4 class="text-info" itemprop="name">{{ post.title }}</h4>
+                    <span itemprop="description">{{ post.description }}</span>
                     <a href="{{ lang_url }}{{ post.url }}">{% translate global.product_link %}</a>
                 </figcaption>
             </figure>

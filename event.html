@@ -13,13 +13,13 @@ body: event-page
             {% if post.image %}
             <div class="media-left">
                 <div class="thumbnail">
-                    <img src="{{ post.image | asset_path }}" alt="{{ post.title }}" titlle="{{ post.title }}">
+                    <img src="{{ post.image | asset_path }}" alt="{{ post.title }}" titlle="{{ post.title }}" itemprop="image">
                 </div>
             </div>
             {% endif %}
             <div class="media-body">
-                <h3 class="media-heading">{{ post.title }}</h3>
-                <p>{{ post.description }}</p>
+                <h3 class="media-heading" itemprop="name">{{ post.title }}</h3>
+                <p itemprop="description">{{ post.description }}</p>
                 <div class="row">
                     <div class="col-xs-6 col-md-6">
                         <strong>{% translate global.time %}</strong>
