@@ -3,14 +3,14 @@ layout: default
 body: product-page
 ---
 <section class="container">
-  <div class="container">
-    <h2 class="item_add">
+  <div class="container" itemscope itemtype="http://schema.org/Product">
+    <h2 class="item_add" itemprop="name">
       {% include title.html title=page.title %}
     </h2>
     <div class="row productDetails">
       {% if page.image %}
       <div class="col-md-6 productImage">
-        <img src="{{ page.image | asset_path }}" alt="{{ page.title}}" title="{{ page.title }}" class="img-responsive" />
+        <img src="{{ page.image | asset_path }}" alt="{{ page.title}}" title="{{ page.title }}" class="img-responsive"  itemprop="image" />
       </div>
       {% endif %}
       <div class="col-md-6 productDescription">
@@ -28,7 +28,8 @@ body: product-page
               {% endfor %}
             </select>
             {% endif %}
-            <h3 class="price text-right item_price {% if page.incentivePrice %}strike-through text-muted{% endif %}" data-price="{{ page.price }}">{{ page.price }}</h3>
+            <meta itemprop="priceCurrency" content="{% translate global.currency %}" />
+            <h3 class="price text-right item_price {% if page.incentivePrice %}strike-through text-muted{% endif %}" data-price="{{ page.price }}" itemprop="price">{{ page.price }}</h3>
             {% if page.incentivePrice %}
             <h3 class="price text-right item_price text-danger" data-price="{{ page.incentivePrice }}">{{ page.incentivePrice }}</h3>
             {% endif %}

@@ -2,6 +2,7 @@ global:
   english: "英文"
   chinese: "中文"
   indonesia: "印尼文"
+  currency: "TWD"
   lang_url: "/zh"
   disqusLocale: "zh_TW"
   product_link: "詳細"
