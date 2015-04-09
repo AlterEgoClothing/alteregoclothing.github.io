@@ -130,14 +130,14 @@
 </nav>
 
     <section class="container">
-  <div class="container">
-    <h2 class="item_add">
+  <div class="container" itemscope itemtype="http://schema.org/Product">
+    <h2 class="item_add" itemprop="name">
       CaptainAmericaBrush
     </h2>
     <div class="row productDetails">
       
       <div class="col-md-6 productImage">
-        <img src="/assets/product/CaptainAmericaBrush-83e295e0e6fa73d7e7d8a8880b28998e.jpg" alt="CaptainAmericaBrush" title="CaptainAmericaBrush" class="img-responsive" />
+        <img src="/assets/product/CaptainAmericaBrush-83e295e0e6fa73d7e7d8a8880b28998e.jpg" alt="CaptainAmericaBrush" title="CaptainAmericaBrush" class="img-responsive"  itemprop="image" />
       </div>
       
       <div class="col-md-6 productDescription">
@@ -161,7 +161,8 @@
               
             </select>
             
-            <h3 class="price text-right item_price " data-price="30">30</h3>
+            <meta itemprop="priceCurrency" content="USD" />
+            <h3 class="price text-right item_price " data-price="30" itemprop="price">30</h3>
             
             <button class="btn btn-info pull-right item_add disabled" ><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add To Cart</button>
           </div>

@@ -128,14 +128,14 @@
 </nav>
 
     <section class="container">
-  <div class="container">
-    <h2 class="item_add">
+  <div class="container" itemscope itemtype="http://schema.org/Product">
+    <h2 class="item_add" itemprop="name">
       BayMax Big Hero 6
     </h2>
     <div class="row productDetails">
       
       <div class="col-md-6 productImage">
-        <img src="/assets/product/BayMaxBigHero6-a7413a8a773611e7425851581e264ea3.jpg" alt="BayMax Big Hero 6" title="BayMax Big Hero 6" class="img-responsive" />
+        <img src="/assets/product/BayMaxBigHero6-a7413a8a773611e7425851581e264ea3.jpg" alt="BayMax Big Hero 6" title="BayMax Big Hero 6" class="img-responsive"  itemprop="image" />
       </div>
       
       <div class="col-md-6 productDescription">
@@ -159,7 +159,8 @@
               
             </select>
             
-            <h3 class="price text-right item_price strike-through text-muted" data-price="2000">2000</h3>
+            <meta itemprop="priceCurrency" content="TWD" />
+            <h3 class="price text-right item_price strike-through text-muted" data-price="2000" itemprop="price">2000</h3>
             
             <h3 class="price text-right item_price text-danger" data-price="1500">1500</h3>
             
