@@ -7,7 +7,7 @@ permalink: pretty
 # Server
 baseurl: /
 encoding: UTF-8
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'bower.json']
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'bower.json', 'jekyll.bat']
 
 languages: ['en', 'id', 'zh']
 languages_text: ['English', 'Bahasa Indonesia', '中文']
